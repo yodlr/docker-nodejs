@@ -1,7 +1,7 @@
 FROM speakit/ubuntu-rax
 MAINTAINER Ross Kukulinski "ross@speakit.io"
 
-ENV LAST_UPDATED 11_36_AM_10_16_2014
+ENV LAST_UPDATED 11_11_2014
 
 RUN apt-get -qq update
 RUN apt-get -qq install -y python-software-properties software-properties-common curl git build-essential supervisor emacs23-nox nano
