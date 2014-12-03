@@ -1,5 +1,5 @@
-FROM speakit/ubuntu-rax
-MAINTAINER Ross Kukulinski "ross@speakit.io"
+FROM yodlr/ubuntu-rax
+MAINTAINER Ross Kukulinski "ross@getyodlr.com"
 
 ENV LAST_UPDATED 11_11_2014
 
