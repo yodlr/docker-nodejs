@@ -1,7 +1,7 @@
 FROM yodlr/ubuntu-rax
 MAINTAINER Ross Kukulinski "ross@getyodlr.com"
 
-ENV LAST_UPDATED 1_23_2015
+ENV LAST_UPDATED 3_3_2015
 
 RUN apt-get -qq update && \
     apt-get -qq install -y \
@@ -14,7 +14,9 @@ RUN apt-get -qq update && \
         emacs23-nox \
         nano \
         && \
-    add-apt-repository -y ppa:chris-lea/node.js && \
+    curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
+    echo 'deb https://deb.nodesource.com/node_0.10 trusty main' > /etc/apt/sources.list.d/nodesource.list && \
+    echo 'deb-src https://deb.nodesource.com/node_0.10 trusty main' >> /etc/apt/sources.list.d/nodesource.list && \
     apt-get -qq update && \
     apt-get -qq install -y nodejs && \
     npm -g install npm && \
