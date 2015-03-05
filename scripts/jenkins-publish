@@ -1,8 +1,0 @@
-#!/bin/bash
-service=nodejs
-branch=$(echo $GIT_BRANCH | cut -d/ -f 2)
-commit=$(git rev-parse --short HEAD)
-docker tag $service:$branch hub.speakit.io/$service
-docker tag $service:$branch hub.speakit.io/$service:jenkins_$BUILD_NUMBER
-docker tag $service:$branch hub.speakit.io/$service:$commit
-docker push hub.speakit.io/$service

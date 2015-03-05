@@ -1,6 +1,0 @@
-#!/bin/bash
-service=nodejs
-branch=$(echo $GIT_BRANCH | cut -d/ -f 2)
-docker run --rm $service:$branch
-exit_code=$?
-exit $exit_code
