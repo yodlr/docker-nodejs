@@ -1,7 +1,7 @@
 FROM yodlr/ubuntu-rax
 MAINTAINER Ross Kukulinski "ross@getyodlr.com"
 
-ENV LAST_UPDATED 3_3_2015
+ENV LAST_UPDATED 3_19_2015
 
 RUN apt-get -qq update && \
     apt-get -qq install -y \
