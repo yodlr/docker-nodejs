@@ -1,7 +1,7 @@
-FROM debian:wheezy
+FROM debian:jessie
 MAINTAINER Ross Kukulinski "ross@getyodlr.com"
 
-ENV LAST_UPDATED 4_23_2015
+ENV LAST_UPDATED 4_29_2015
 
 RUN apt-get -qq update && \
     apt-get -yqq install apt-transport-https && \
@@ -14,8 +14,8 @@ RUN apt-get -qq update && \
         build-essential \
         supervisor && \
     curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
-    echo 'deb https://deb.nodesource.com/node_0.10 wheezy main' > /etc/apt/sources.list.d/nodesource.list && \
-    echo 'deb-src https://deb.nodesource.com/node_0.10 wheezy main' >> /etc/apt/sources.list.d/nodesource.list && \
+    echo 'deb https://deb.nodesource.com/node_0.10 jessie main' > /etc/apt/sources.list.d/nodesource.list && \
+    echo 'deb-src https://deb.nodesource.com/node_0.10 jessie main' >> /etc/apt/sources.list.d/nodesource.list && \
     apt-get -qq update && \
     apt-get -qq install -y nodejs && \
     npm -g install npm && \
